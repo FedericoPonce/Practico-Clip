@@ -1,0 +1,218 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {      			   /*Cambia fondo pagina*/
+	background: #000;
+}
+
+
+/*SECTOR BANNER*/
+ /*Formato Banner*/
+div {
+	width:100%;
+	
+}
+
+
+ /*Estilo de Imgaen/logo*/
+#banner {
+    height: 350px; 
+    margin-top: 0px; 
+    margin-bottom: 0px;  
+    width: 1000px; 
+    padding: 0px;
+}
+/*Sector BARRA DE NAVEGACION*/
+ /*Cambiar Formatos de Barra de navegacion*/
+
+header, .main, footer {
+	background:#000;
+	width:90%;/*Se le pone 90 para diseño Responsivo/adaptable*/
+	max-width:1000px;
+	margin:20px auto;
+}
+
+.navegacion{   			/*Cambia tamaños Barra de cosas*/
+	width: 1000px;
+	margin: 10px auto; /*Margenes de separacion entre la barra y cosas */
+	background: #fff;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{      /*Cambia estilo contenedor de barra*/
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: Arial;
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: #CE7D35;
+	transition: all .3s;
+}
+
+
+
+/*SECTOR TITULOS*/
+ /*Cambiar Formatos de Titulos*/
+#TituloArt {
+	font-family:Arial;
+	font-weight:bold;/*Anchura de letra,bold=negrita*/
+	text-align:left; /*alinear texto, tambien esta center,right*/
+	line-height:30px; /*Separacion entre lineas*/
+	text-decoration:underline;/*decoracion texto, tambien esta none,line-*/
+}
+
+#TituloConciertos {
+	font-family:Arial;
+	font-weight:bold;
+	text-align:left;
+	line-height:30px;
+	color:white;
+	font-size: 30px
+}
+
+/*SECTOR ARTICULOS*/
+ /*Cambiar Formatos Articulos*/
+
+.main .articles {/*formato articulos*/
+	width:100%;
+	margin-right:0%;
+	float:left;
+}
+
+.main .articles article { /*que van a tener todos los articulos*/
+	padding:40px;
+	background:#fff;
+	margin-bottom:30px;
+	font-family:Arial;
+}
+ /*Formato de Texto Articulos/GENERALES */
+
+p { 
+	color:rgba(0,0,0,.5); /*opacidad con el.5*/
+	font-family:Arial; /*"Entre comillas para colocar tipo de fuentes con espacios"Si no tiene esa fuente se le pone con comas*/ 
+	font-size:20px; /*Cambiar tamaño texto*/
+	text-align:left; /*alinear texto, tambien esta left,right*/
+	letter-spacing:normal;/* espaciado entre letras*/ 
+	word-spacing:normal; /*espaciado entre palabras*/
+}
+			
+
+/*Sector PIE DE PAGINA */
+ /*formato pie de pagina*/
+.footer {
+	background:#000;
+	color:#fff;
+	clear:both;
+	padding:10px 0px;
+	text-align:center;
+	font-family:Arial;
+	font-size: 30px;
+}
+
+
+/*SECTOR IMAGENES */
+ /*Formato Imagen Para Todas*/
+
+img{
+	border-radius:5px;
+}
+
+ /*Formato Imagen Particular*/
+
+#imag {
+    float: right;
+    position: relative;
+    margin:0px 0px 10px 10px;
+    bottom: 15px;
+}
+
+div.table-title {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #000000;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Estilo Tabla **/
+
+.table-fill {
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+ /*** Nombres tabla**/
+th {
+  color:#ffffff;;
+  background:#000000;
+  font-size:20px;
+  font-weight: 50;
+  padding:24px;
+  text-align:left;
+  vertical-align:middle;
+}
+  
+tr {
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+}
+
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+}
+
+
+th.text-left {
+  text-align: left;
+}

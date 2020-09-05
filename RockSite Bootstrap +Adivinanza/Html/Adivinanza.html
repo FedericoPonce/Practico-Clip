@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <title>Rock Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta lang="es-AR">
+    <meta charset="utf-8">
+    <link rel="icon" href="../Images/Logo.ico">
+    <style>
+      body{
+        background-color:black;
+        font-family: 'Open Sans', sans-serif;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+        <header class="header">
+            <div class="bg-light ">
+                <div class="container">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand">
+                            <img src="../Images/Logo.ico" width="30" height="30" class="d-inline-block align-top" alt="Logo" loading="lazy">
+                            RockSite
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class=" navg navbar-nav w-100 justify-content-center ">
+                            <a class="nav-item nav-link " href="../index.html">Inicio</a>
+                            <a class="nav-item nav-link" href="Bandas.html">Bandas</a>
+                            <a class="nav-item nav-link" href="Nosotros.html">Nosotros</a>
+                            <a class="nav-item nav-link" href="Contacto.html">Contacto</a>
+                            <a class="nav-item nav-link active" href="#">Adivinanza</a>
+                            </div>
+                        </div>
+                </nav>
+                </div>
+                </div>
+                <div class="text-center">
+                <img src="../Images/Banner.jpeg" class="img-fluid" alt="Banner">
+                </div>
+                <div class=" mx-auto card bg-light" style="width: 1000px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Vamos a Jugar!</h5>
+                        <p class="card-text"></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                            <h5 class="card-title">Empezemos!</h5>
+                            <p class="card-text">Tenés <p id="intentos">4</p>Intentos por delante suerte!</p>
+                            <p class="card-text" id="pista1">Pista:Banda de Rock Argentina</p>
+                            <p class="card-text"id="pista2">Pista:Banda exitosa durante las décadas de 1980 y 1990</p>
+                            <p class="card-text" id="pista3">Pista:Su cantante es uno de los más importantes e influyentes de América Latina</p>
+                            <p class="card-text" id="pista4">Pista:El logo de la banda es un circulo amarillo con dos flechas estilo vinilo</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                            <h5 class="card-title">Adivina la Banda:</h5>
+                                <div class="header-content-left">
+                                    <img src="../Images/Adivinanza.jpg" style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <br>
+                    <form method="POST" action=""> 
+                        <div class="form-group col-md-3">
+                            <label for="inputRespuesta" class="pl-1">Tu Respuesta:</label>
+                            <input type="text" class="form-control" placeholder="Tu Respuesta" required>
+                        </div>
+                        <div class="col-auto">
+                            <input type="submit" class="btn btn-dark mb-2" value="Enviar" onclick="Adivinanza()">
+                        </div>
+                    </form>
+                    <div class="alert alert-success" role="alert">
+                        Acertaste! Sos una persona con buen gusto musical!!Te recomendamos escuchar Signos de Soda Stereo
+                        <a href="https://www.youtube.com/watch?v=XYzm7IJLbf8" class="btn btn-outline-secondary btn-lg mt-2" target="_blank">Hace Click para escuchar Signos</a>
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        Fallaste Podes volver a intentarlo Haciendo Click acá.
+                        <a href="Adivinanza.html" class="btn btn-outline-secondary btn-lg mt-2">Hace Click para reintentar</a>
+                    </div>
+            </div>
+        </header>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script>
+            function Adivinanza(){
+                var intentos=document.getElementById("intentos").textContent;
+                var pista1 =document.getElementById("pista1");
+                var pista2 =document.getElementById("pista2");
+                var pista3 =document.getElementById("pista3");
+                var pista4 =document.getElementById("pista4");
+                var alerta1=document.getElementById("alert-success");
+                var alerta2=doument.getElementById("alert-danger");
+                var inputRespuesta=document.getElementById("inputRespuesta");
+                var nombre=inputRespuesta.value;
+                var res=nombre.toUpperCase();
+                if(res=="SODA STEREO" && intentos!=0){
+                    console.log("Éxito")
+                    alerta1.style.display="block"
+                }else{
+                    intentos=intentos-1;
+                    document.getElementById("intentos").innerHTML=intentos
+                }
+                if(intentos == 3){
+                    pista1.style.display="block";
+                }
+                if(intentos == 2){
+                    pista2.style.display="block";
+                }
+                if(intentos == 1){
+                    pista3.style.display="block";
+                    pista4.style.display="block";
+                }
+
+            }
+        </script>
+    </body>
+</html>
