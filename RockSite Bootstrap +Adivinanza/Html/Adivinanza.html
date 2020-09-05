@@ -95,33 +95,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script>
             function Adivinanza(){
-                var intentos=document.getElementById("intentos").textContent;
-                var pista1 =document.getElementById("pista1");
-                var pista2 =document.getElementById("pista2");
-                var pista3 =document.getElementById("pista3");
-                var pista4 =document.getElementById("pista4");
-                var alerta1=document.getElementById("alert-success");
-                var alerta2=doument.getElementById("alert-danger");
-                var inputRespuesta=document.getElementById("inputRespuesta");
-                var nombre=inputRespuesta.value;
-                var res=nombre.toUpperCase();
-                if(res=="SODA STEREO" && intentos!=0){
-                    console.log("Éxito")
-                    alerta1.style.display="block"
-                }else{
-                    intentos=intentos-1;
-                    document.getElementById("intentos").innerHTML=intentos
-                }
-                if(intentos == 3){
-                    pista1.style.display="block";
-                }
-                if(intentos == 2){
-                    pista2.style.display="block";
-                }
-                if(intentos == 1){
-                    pista3.style.display="block";
-                    pista4.style.display="block";
-                }
+               
 
             }
         </script>
