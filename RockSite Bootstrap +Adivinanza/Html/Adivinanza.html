@@ -11,6 +11,18 @@
         background-color:black;
         font-family: 'Open Sans', sans-serif;
       }
+      .pista{
+          display: none;
+      }
+      .alert-success{
+          display: none;
+      }
+      .alert-danger{
+          display: none;
+      }
+      #Resolucion{
+          display: none;
+      }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
   </head>
@@ -51,53 +63,49 @@
                         <div class="card">
                             <div class="card-body">
                             <h5 class="card-title">Empezemos!</h5>
-                            <p class="card-text">Tenés <p id="intentos">4</p>Intentos por delante suerte!</p>
-                            <p class="card-text" id="pista1">Pista:Banda de Rock Argentina</p>
-                            <p class="card-text"id="pista2">Pista:Banda exitosa durante las décadas de 1980 y 1990</p>
-                            <p class="card-text" id="pista3">Pista:Su cantante es uno de los más importantes e influyentes de América Latina</p>
-                            <p class="card-text" id="pista4">Pista:El logo de la banda es un circulo amarillo con dos flechas estilo vinilo</p>
+                            <p class="card-text">Tenés <span id="intentos">4</span> Intentos para adivinar</p>
+                            <p class="card-text pista" id="pista1">Pista:Banda de Rock Argentina</p>
+                            <p class="card-text pista" id="pista2">Pista:Banda exitosa durante las décadas de 1980 y 1990</p>
+                            <p class="card-text pista" id="pista3">Pista:Su cantante es uno de los más importantes e influyentes de América Latina</p>
+                            <p class="card-text pista" id="pista4">Pista:El logo de la banda es un circulo amarillo con dos flechas estilo disco de vinilo</p>
                             </div>
                         </div>
                         </div>
                         <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                            <h5 class="card-title">Adivina la Banda:</h5>
-                                <div class="header-content-left">
-                                    <img src="../Images/Adivinanza.jpg" style="width: 100%;">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Adivina la Banda:</h5>
+                                    <div class="header-content-left">
+                                        <img src="../Images/Adivinanza.jpg" style="width: 100%;">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
                     </div>
                     <br>
-                    <form method="POST" action=""> 
+                    <form>
+                        <label class="pl-1" id="Resolucion">La Banda era: Soda Stereo</label>
+                        <div class="alert alert-success" id="Acertaste">
+                            Acertaste! Sos una persona con buen gusto musical!!Te recomendamos escuchar El Rito de esta famosa bansa
+                            <a href="https://www.youtube.com/watch?v=PzB16cBy9CA" class="btn btn-outline-secondary btn-lg mt-2" target="_blank">Hace Click para escuchar El Rito</a>
+                        </div>
+                        <div class="alert alert-danger" id="Erraste">
+                            Fallaste Podes volver a intentarlo Haciendo Click acá.
+                            <a href="Adivinanza.html" class="btn btn-outline-secondary btn-lg mt-2">Hace Click para reintentar</a>
+                        </div>
                         <div class="form-group col-md-3">
-                            <label for="inputRespuesta" class="pl-1">Tu Respuesta:</label>
-                            <input type="text" class="form-control" placeholder="Tu Respuesta" required>
+                            <label class="pl-1" id="labelInput">Tu Respuesta:</label>
+                            <input type="text" class="form-control" placeholder="Tu Respuesta" required id="inputRespuesta">
                         </div>
                         <div class="col-auto">
-                            <input type="submit" class="btn btn-dark mb-2" value="Enviar" onclick="Adivinanza()">
+                            <input class="btn btn-dark mb-2" value="Enviar" onclick="adivinanza()" id="boton">
                         </div>
                     </form>
-                    <div class="alert alert-success" role="alert">
-                        Acertaste! Sos una persona con buen gusto musical!!Te recomendamos escuchar Signos de Soda Stereo
-                        <a href="https://www.youtube.com/watch?v=XYzm7IJLbf8" class="btn btn-outline-secondary btn-lg mt-2" target="_blank">Hace Click para escuchar Signos</a>
-                    </div>
-                    <div class="alert alert-danger" role="alert">
-                        Fallaste Podes volver a intentarlo Haciendo Click acá.
-                        <a href="Adivinanza.html" class="btn btn-outline-secondary btn-lg mt-2">Hace Click para reintentar</a>
-                    </div>
             </div>
         </header>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script>
-            function Adivinanza(){
-               
-
-            }
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
