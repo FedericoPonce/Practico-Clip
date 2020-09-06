@@ -1,3 +1,4 @@
+let lista=[];
 function adivinanza(){
     let intentos = document.getElementById("intentos").textContent;
     let inputRespuesta = document.getElementById("inputRespuesta");
@@ -18,9 +19,6 @@ function adivinanza(){
         
     }
     switch (intentos) {
-        case 3:
-            
-            break;
         case 2:
             document.getElementById("pista1").style.display="block"
             document.getElementById("pista2").style.display="block"
@@ -36,6 +34,12 @@ function adivinanza(){
             document.getElementById("labelInput").hidden=true
             break;
     }
-    
-
+    lista.push(respuesta);
+    let pruebas=document.getElementById("Respuestas");
+    let cadena=" ";
+    for (let i = 0; i < lista.length; i++) {
+        cadena+=" "+ lista[i]+" - "
+        
+    }
+    pruebas.innerHTML=cadena;
 }
