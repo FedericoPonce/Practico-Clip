@@ -12,6 +12,9 @@
             background-color:black;
             font-family: 'Open Sans', sans-serif;
           }
+          textArea {
+            resize: none;
+          }
         </style>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 	</head>
@@ -46,26 +49,26 @@
                 <div class="card-body">
                   <h2>Contacta con nosotros!</h2>
                 </div>
-                <form method="POST" action=""> 
+                <form method="POST" onsubmit="return validar()"> 
                     <div class="form-group col-md-3">
-                        <label for="inputNombre" class="pl-3">Nombre:</label>
-                        <input type="text" class="form-control" placeholder="Nombre" required>
+                        <label for="inputNombre" class="pl-1">Nombre:</label>
+                        <input type="text" class="form-control" placeholder="Nombre"  id="nombre">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="inputApellido">Apellido:</label>
-                        <input type="text" class="form-control" placeholder="Apellido" required>
+                        <input type="text" class="form-control" placeholder="Apellido"  id="apellido">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="inputEdad">Edad:</label>
-                        <input type="text" class="form-control" placeholder="Edad" required>
+                        <input type="text" class="form-control" placeholder="Edad"  id="edad">
                     </div>
                     <div class="form-group col-md-5">
                         <label for="exampleFormControlInput1" class="pl-1">Email:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com" required>
+                        <input type="email" class="form-control"  placeholder="nombre@ejemplo.com"  id="email" >
                     </div>
                     <div class="form-group col-md-12">
                         <label for="exampleFormControlTextarea1"class="pl-1">Deja tu mensaje:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        <textarea class="form-control"  rows="3" cols="50" id="textArea" ></textarea>
                     </div>
                     <div class="col-auto">
                         <input type="submit" class="btn btn-dark mb-2" value="Submit">
@@ -76,6 +79,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
     </body>
 	<br>
 	<br>
